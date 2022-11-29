@@ -8,7 +8,7 @@
 
 <div class="product">
   <!-- <img class="product__img" src="https://picsum.photos/150" alt="https://random.imagecdn.app/120/120"/> -->
-  <img class="product__img" src={imgs[product.id%4]} alt="https://random.imagecdn.app/120/120"/>
+  <img class="product__img" src={product.image} alt="Nothing here"/>
   <div class="product__info">
     <p class="product__name">{product.name}</p>
     <p class="product__description">{product.description}</p>

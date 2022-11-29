@@ -1,7 +1,11 @@
 <script>
+  import { basket as basketStore, categories as categoriesStore, products as productsStore } from './../store/store'
   export let product = {id: 0, name: '', description: '', price: 0};
   export let basket = {};
-  let count = 0;
+  basketStore.subscribe((data) => { 
+    basket = data
+  })
+  let count = basket[product.id] || 0;
   const increment = () => {
     count += 1;
     basket[product.id] = count;

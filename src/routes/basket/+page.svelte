@@ -25,7 +25,7 @@
       {#if basket[product.id] != undefined}
         <div class="item">
           <div class="item__info">
-            <img class="item__img" src="" alt="">
+            <img class="item__img" src={product.image} alt="">
             <div class="item__text">
               <div>
                 <span class="item__name">{product.name}</span><span class="item__count">{basket[product.id] || 0}x</span>
