@@ -26,20 +26,26 @@
     justify-content: space-around;
     /* justify-content: flex-start; */
     align-items: center;
+    /* padding: 5px; */
   }
   .product__group__category{
-    color: #fff;
-    padding: 0 15px;
-    font-size: 24px;
+    color: var(--tg-theme-text-color);
+    padding-left: 3vw;
+    font-size: 28px;
     width: 100%;
+    margin-bottom: 1px;
   }
   .product__group__produtcs{
+    margin-top: 2vw;
+    margin-bottom: 2vw;
     width: 100%;
     display: grid;
     align-content: center;
     justify-content: center;
     align-items: center;
     justify-items: center;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0 3vw;
+    gap: 3vw;
   }
 </style>

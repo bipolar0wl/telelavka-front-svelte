@@ -9,9 +9,6 @@
   let products = [];
   let currentCategory = {};
   let basket = {};
-  basketStore.subscribe((data) => { 
-    basket = data
-  })
   categoriesStore.subscribe((data) => {
     categories = data
   })
@@ -21,11 +18,22 @@
   $: basketStore.set(basket);
 
   onMount(async () => {
-    currentCategory = categories[0]
     let tg = window.Telegram.WebApp;
-    tg.setBackgroundColor('#ffa')
+    currentCategory = categories[0]
     tg.expand();
-    tg.MainButton.show()
+    tg.MainButton.setText('Посмотреть заказ')
+    tg.MainButton.setParams({
+      'color': '#31b545'
+    })
+    tg.setBackgroundColor('secondary_bg_color');
+    basketStore.subscribe((data) => { 
+      basket = data
+      if (Object.keys(basket).length !== 0){
+        tg.MainButton.show()
+      }else{
+        tg.MainButton.hide()
+      }
+    })
   });
 </script>
 
@@ -33,7 +41,6 @@
   <div class="app">
     <CategoriesList bind:categories bind:currentCategory />
     <ProductList bind:basket products={products} categories={categories} bind:currentCategory />
-    <FooterBar bind:basket />
   </div>
 </main>
 
@@ -42,12 +49,12 @@
     scroll-behavior:smooth;
   }
   body{
-    background-color: #1c1c1e;
+    background: var(--tg-theme-secondary-bg-color);
   }
   .app{
-    background: var(--tg-theme-button-color);
-    color: var(--tg-theme-button-text-color);
-    /* max-width: 440px; */
+    background: var(--tg-theme-secondary-bg-color);
+    color: var(--tg-theme-text-color);
+    /* max-width: 360px; */
     margin: 0 auto;
   }
 </style>

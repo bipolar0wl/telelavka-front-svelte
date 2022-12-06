@@ -52,9 +52,9 @@
 
 <style>
   *{
-    color: #fff;
     scroll-behavior:smooth;
-    background-color: #1c1c1e;
+    background: var(--tg-theme-bg-color);
+    color: var(--tg-theme-text-color);
   }
   body{
     margin: 0;

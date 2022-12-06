@@ -10,8 +10,10 @@
   <!-- <img class="product__img" src="https://picsum.photos/150" alt="https://random.imagecdn.app/120/120"/> -->
   <img class="product__img" src={product.image} alt="Nothing here"/>
   <div class="product__info">
-    <p class="product__name">{product.name}</p>
-    <p class="product__description">{product.description}</p>
+    <div>
+      <p class="product__name">{product.name}</p>
+      <p class="product__description">{product.description}</p>
+    </div>
     <Counter bind:basket product={product}/>
   </div>
   {#if rules.edit}
@@ -21,16 +23,16 @@
 
 <style>
   .product{
-    margin: 10px;
+    /* margin: 10px 0; */
     /* outline: 1px solid gray; */
     border-radius: 5px;
-    width: 150px;
+    width: 100%;
   }
   .product__info{
     padding: 0;
   }
   .product__name{
-    color: #fff;
+    color: var(--tg-theme-text-color);
     font-size: 16px;
     /* font-weight: bold; */
     padding: 0;
@@ -41,15 +43,15 @@
     /* margin-block: 10px; */
   }
   .product__description{
-    color: #fff;
+    color: var(--tg-theme-hint-color);
     font-size: 12px;
-    margin: 0 0 5px 0;
+    margin: 2px 0 5px 0;
   }
   .product__img{
-    max-width: 150px;
-    max-height: 150px;
-    min-width: 150px;
-    min-height: 150px;
+    max-width: 100%;
+    /* max-height: 45vw; */
+    /* min-width: 45vw; */
+    /* min-height: 45vw; */
     background-color: #fff;
     border-radius: 10px;
     overflow: hidden;

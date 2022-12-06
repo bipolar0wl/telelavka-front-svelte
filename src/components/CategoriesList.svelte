@@ -23,11 +23,13 @@
 .categories{
   display: flex;
   top: 0;
-  background-color: #1c1c1e;
+  /* margin-left: 9px; */
+  margin: 0 3vw;
+  background: var(--tg-theme-secondary-bg-color);
   position: sticky;
   align-items: center;
   justify-content: flex-start;
-  padding: 5px;
+  padding: 5px 0;
   overflow: auto;
   white-space: nowrap;
 }

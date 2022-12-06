@@ -20,7 +20,8 @@
     }
   }
   let price = product.price.toString();
-  price = price.slice(0, -2) + '.' + price.substring(price.length-2);
+  // Копейки
+  // price = price.slice(0, -2) + '.' + price.substring(price.length-2);
 </script>
 
 <div class="counter">
@@ -61,34 +62,44 @@
     justify-content: space-between;
     align-items: center;
   }
+  .counter .counter-edit button{
+    min-width: 20px;
+    width: 12vw;
+  }
   .counter button{
     appearance: none;
     border: 0;
     border-radius: 10px;
-    color: #fff;
+    color: var(--tg-theme-text-color);
     padding: 4px 8px;
     font-size: 16px;
+    min-height: 27px;
+    height: 8vw;
   }
   .add-button{
-    background-color: #f9a819;
+    /* background-color: var(--tg-theme-button-color); */
+    background-color: #F8A917;
     animation: slideOut ease 0.25s;
     width: 100%;
   }
   .add-button span{
-    color: black;
-    background-color: #f9a819;
+    color: var(--tg-theme-text-color);
+    /* background-color: var(--tg-theme-button-color); */
+    background-color: #F8A917;
     font-weight: bold;
     white-space: nowrap;
   }
   .increment{
-    background-color: #f9a819;
+    /* background-color: var(--tg-theme-button-color); */
+    color: var(--tg-theme-text-color);
+    background-color: #F8A917;
     animation: slidein ease 0.25s;
   }
   .decrement{
     background-color: #cf5a4d;
   }
   .count{
-    color: #fff;
+    color: var(--tg-theme-text-color);
   }
   .increment, .decrement{
     font-weight: bold;

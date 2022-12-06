@@ -12,29 +12,19 @@
     categoriesBlock.forEach(element => {
       element.addEventListener("click", function(e) {
       }, false);
-      /* let id = element.getAttribute('data-category-name')
-      console.log(`${id}`)
-      console.log(document.querySelectorAll(`.product__group`))
-      console.log(document.getElementById(`${id}`))
-      console.log(element.scrollHeight) */
     });
-    window.addEventListener('wheel', function(e) {
-      let elems = document.querySelectorAll(`.product__group`);
+    window.addEventListener('scroll', (e) => {scrollspy(e)});
+  })
+  function scrollspy(e){
+    let elems = document.querySelectorAll(`.product__group`);
       for (let i = 0; i< elems.length; i++){
         let elem = elems[i];
-        // console.log(elem.getBoundingClientRect().top);
+        currentCategory = categories[i]
         if (window.pageYOffset < elem.offsetTop){
           break;
         }
-        currentCategory = categories[i]
       }
-      // console.log(elem.scrollHeight);
-      // window.scrollTo({
-      //   top: 1000,
-      //   behavior: "smooth"
-      // });
-    });
-  })
+  }
 </script>
 
 <div class="products">
@@ -45,7 +35,7 @@
 
 <style>
   .products{
-    /* width: 340px; */
+    /* width: 360px; */
     margin: 0 auto;
     display: flex;
     flex-direction: row;
