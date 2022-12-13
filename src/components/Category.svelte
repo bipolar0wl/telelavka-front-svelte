@@ -1,34 +1,33 @@
 <script>
   export let category = {id: 0, name: ''}
   export let currentCategory = {id: 0, name: ''}
+  const headerOffset = 40;
+
+  function scrollSpy() {
+    let elem = document.getElementById(category.name);
+    setTimeout(() => {
+      if (document.documentElement.clientHeight == document.body.scrollHeight - window.pageYOffset || window.pageYOffset + headerOffset == elem.offsetTop){
+        currentCategory = category;
+        setTimeout(() => {
+          currentCategory = category;
+        }, 100)
+      }else{
+        scrollSpy();
+      }
+    }, 100)
+  }
 </script>
 
-<!-- <a href="#{category.name}" data-category-name={category.name} class="category {currentCategory.id === category.id ? 'category--active' : ''}" 
-  on:click="{(e) => {
-    e.preventDefault();
-    currentCategory = category;
-    let elem = document.getElementById(category.name)
-    let scrollHeight = elem ? elem.offsetTop : 0;
-    window.scrollTo({
-      top: scrollHeight - 40,
-      behavior: "smooth"
-    });
-  }}"
-  >
-  {category.name}
-</a> -->
 <a href="#{category.name}" data-category-name={category.name} class="category {currentCategory.id === category.id ? 'category--active' : ''}" 
   on:click="{(e) => {
     e.preventDefault();
     let elem = document.getElementById(category.name)
     let scrollHeight = elem ? elem.offsetTop : 0;
     window.scrollTo({
-      top: scrollHeight - 40,
+      top: scrollHeight - headerOffset,
       behavior: "smooth"
     });
-    setTimeout(() => {
-      currentCategory = category;
-    }, 250)
+    scrollSpy();
   }}"
   >
   {category.name}

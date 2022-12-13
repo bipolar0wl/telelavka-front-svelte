@@ -13,9 +13,9 @@
       element.addEventListener("click", function(e) {
       }, false);
     });
-    window.addEventListener('scroll', (e) => {scrollspy(e)});
+    window.addEventListener('scroll', (e) => {scrollSpy(e)});
   })
-  function scrollspy(e){
+  function scrollSpy(e){
     let elems = document.querySelectorAll(`.product__group`);
       for (let i = 0; i< elems.length; i++){
         let elem = elems[i];
