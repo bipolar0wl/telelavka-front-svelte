@@ -73,8 +73,12 @@
     color: var(--tg-theme-text-color);
     padding: 4px 8px;
     font-size: 16px;
+    font-weight: bold;
     min-height: 27px;
     height: 8vw;
+  }
+  .counter button{
+    font-weight: 700;
   }
   .add-button{
     /* background-color: var(--tg-theme-button-color); */
@@ -93,7 +97,7 @@
     /* background-color: var(--tg-theme-button-color); */
     color: var(--tg-theme-text-color);
     background-color: #F8A917;
-    animation: slidein ease 0.25s;
+    animation: slideIn ease 0.25s;
   }
   .decrement{
     background-color: #cf5a4d;
@@ -106,19 +110,21 @@
     font-size: large;
     width: 35px;
   }
-  @keyframes slidein {
+  @keyframes slideIn {
     from {
+      /* transform: translateX(100%); */
       margin-left: -100%;
       width: 100%;
     }
     to {
+      /* transform: translateX(0); */
       margin-left: 0%;
       width: 100%;
     }
   }
   @keyframes slideOut {
     from {
-      width: 40%;
+      width: 20%;
     }
     to {
       width: 100%;

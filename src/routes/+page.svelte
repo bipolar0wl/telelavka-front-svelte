@@ -4,11 +4,13 @@
   import CategoriesList from './../components/CategoriesList.svelte'
   import ProductList from './../components/ProductList.svelte'
   import FooterBar from './../components/FooterBar.svelte';
+	import Basket from './../components/Basket.svelte';
 
   let categories = [];
   let products = [];
   let currentCategory = {};
   let basket = {};
+  let page = 0;
   categoriesStore.subscribe((data) => {
     categories = data
   })
@@ -26,6 +28,9 @@
       'color': '#31b545'
     })
     tg.setBackgroundColor('secondary_bg_color');
+    tg.MainButton.onClick(() => {
+      page = (page == 0) ? 1 : 0;
+    });
     basketStore.subscribe((data) => { 
       basket = data
       if (Object.keys(basket).length !== 0){
@@ -39,8 +44,12 @@
 
 <main>
   <div class="app">
-    <CategoriesList bind:categories bind:currentCategory />
-    <ProductList bind:basket products={products} categories={categories} bind:currentCategory />
+    {#if page == 0}
+      <CategoriesList bind:categories bind:currentCategory />
+      <ProductList bind:basket products={products} categories={categories} bind:currentCategory />
+    {:else}
+      <Basket bind:page />
+    {/if}
   </div>
 </main>
 

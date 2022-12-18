@@ -20,13 +20,10 @@
   .product__group{
     width: 100%;
     display: flex;
-    /* display: grid; */
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    /* justify-content: flex-start; */
     align-items: center;
-    /* padding: 5px; */
   }
   .product__group__category{
     color: var(--tg-theme-text-color);
