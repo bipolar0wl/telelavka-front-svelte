@@ -10,7 +10,5 @@ const config = {
 		https: true,
 	},
 };
-console.log(import.meta.env.BOT_TOKEN)
-console.log(import.meta.env.PAYMENTS_PROVIDER_TOKEN)
 
 export default config;
