@@ -7,8 +7,8 @@
 </script>
 
 <div class="product">
-  <!-- <img class="product__img" src="https://picsum.photos/150" alt="https://random.imagecdn.app/120/120"/> -->
-  <img class="product__img" src={product.image} alt="Nothing here"/>
+  <!-- <img class="product__img" src={product.image} alt="Nothing here"/> -->
+  <img class="product__img" src={"/bipolar0wl/" + product.image} alt="Nothing here"/>
   <div class="product__info">
     <div>
       <p class="product__name">{product.name}</p>
@@ -55,6 +55,10 @@
     background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 1/1;
   }
   .product__img:hover{
     /* -webkit-animation: image_blur 2s;  */

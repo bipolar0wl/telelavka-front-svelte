@@ -25,7 +25,7 @@
     let scrollHeight = elem ? elem.offsetTop : 0;
     window.scrollTo({
       top: scrollHeight - headerOffset,
-      behavior: "smooth"
+      behavior: 'smooth'
     });
     scrollSpy();
   }}"
@@ -48,5 +48,8 @@
   background: var(--tg-theme-bg-color);
   border-radius: 25px;
   color: var(--tg-theme-text-color);
+}
+.category:active{
+    background: transparent;
 }
 </style>

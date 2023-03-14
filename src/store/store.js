@@ -27,8 +27,7 @@ export let products = writable([
 		category_id: 1,
 		price: 1500,
 		// discount: 10,
-		image:
-			'https://storage.yandexcloud.net/telegram-shop/telegram-shop/%D0%91%D1%83%D0%BA%D0%B5%D1%82%20%D0%B8%D0%B7%20%D0%A0%D0%B0%D0%B7%D0%BD%D0%BE%D1%86%D0%B2%D0%B5%D1%82%D0%BD%D1%8B%D1%85%20%D0%A0%D0%BE%D0%B7.jpeg'
+		image: './images/Розы.jpeg'
 	},
 	{
 		id: 2,
@@ -37,8 +36,7 @@ export let products = writable([
 		category_id: 1,
 		price: 2350,
 		// discount: 0,
-		image:
-			'https://storage.yandexcloud.net/telegram-shop/telegram-shop/%D0%91%D1%83%D0%BA%D0%B5%D1%82%20%D0%98%D0%B7%209%20%D0%A5%D1%80%D0%B8%D0%B7%D0%B0%D0%BD%D1%82%D0%B5%D0%BC.jpeg'
+		image: './images/Хризантемы.jpeg'
 	},
 	{
 		id: 3,
@@ -47,8 +45,7 @@ export let products = writable([
 		category_id: 1,
 		price: 1550,
 		// discount: 0,
-		image:
-			'https://storage.yandexcloud.net/telegram-shop/telegram-shop/%D0%93%D0%B8%D0%BF%D1%81%D0%BE%D1%84%D0%B8%D0%BB%D1%8B.jpeg'
+		image: './images/Гипсофилы.jpeg'
 	},
 	{
 		id: 4,
@@ -57,8 +54,7 @@ export let products = writable([
 		category_id: 1,
 		price: 1550,
 		// discount: 0,
-		image:
-			'https://storage.yandexcloud.net/telegram-shop/telegram-shop/%D0%91%D1%83%D0%BA%D0%B5%D1%82%20%D0%98%D1%80%D0%B8%D1%81.jpeg'
+		image: './images/Ирис.jpeg'
 	},
 	{
 		id: 5,
@@ -67,8 +63,7 @@ export let products = writable([
 		category_id: 2,
 		price: 612,
 		// discount: 0,
-		image:
-			'https://storage.yandexcloud.net/telegram-shop/telegram-shop/%D1%81%D0%B2%D0%B5%D1%87%D0%B0%20%D0%BA%D0%B5%D0%BA%D1%81%20%26%20%D0%B2%D0%B0%D0%BD%D0%B8%D0%BB%D1%8C.jpeg'
+		image: './images/Свеча ароматная.jpeg'
 	},
 	{
 		id: 6,
@@ -77,8 +72,7 @@ export let products = writable([
 		category_id: 2,
 		price: 492,
 		// discount: 0,
-		image:
-			'https://storage.yandexcloud.net/telegram-shop/telegram-shop/%D1%81%D0%B2%D0%B5%D1%87%D0%B0%20Tropical%20Delight%20.jpeg'
+		image: './images/Свеча.jpeg'
 	},
 	{
 		id: 7,
@@ -87,8 +81,7 @@ export let products = writable([
 		category_id: 4,
 		price: 1550,
 		// discount: 0,
-		image:
-			'https://storage.yandexcloud.net/telegram-shop/telegram-shop/%D1%84%D0%BE%D1%82%D0%BE%D0%B0%D0%BB%D1%8C%D0%B1%D0%BE%D0%BC.jpeg'
+		image: './images/Книга.jpeg'
 	},
 	{
 		id: 8,
@@ -97,8 +90,7 @@ export let products = writable([
 		category_id: 4,
 		price: 699,
 		// discount: 0,
-		image:
-			'https://storage.yandexcloud.net/telegram-shop/telegram-shop/%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA.jpeg'
+		image: './images/Светильник.jpeg'
 	},
 	{
 		id: 9,
@@ -107,8 +99,7 @@ export let products = writable([
 		category_id: 3,
 		price: 2500,
 		// discount: 0,
-		image:
-			'https://storage.yandexcloud.net/telegram-shop/telegram-shop/%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA.jpeg'
+		image: './images/Полотенца оранжевые.jpeg'
 	},
 	{
 		id: 10,
@@ -117,7 +108,6 @@ export let products = writable([
 		category_id: 3,
 		price: 2500,
 		// discount: 0,
-		image:
-			'https://storage.yandexcloud.net/telegram-shop/telegram-shop/%D0%BF%D0%BE%D0%BB%D0%BE%D1%82%D0%B5%D0%BD%D1%86%D0%B0%203%20%D0%A8%D1%82.jpeg'
+		image: './images/Полотенца.jpeg'
 	}
 ]);

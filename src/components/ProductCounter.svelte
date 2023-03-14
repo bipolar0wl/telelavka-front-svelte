@@ -2,15 +2,22 @@
   import { basket as basketStore, categories as categoriesStore, products as productsStore } from './../store/store'
   export let product = {id: 0, name: '', description: '', price: 0};
   export let basket = {};
+  import { onMount } from "svelte";
+  let tg;
+  onMount(async () => {
+    tg = window.Telegram.WebApp;
+  })
   basketStore.subscribe((data) => { 
     basket = data
   })
   let count = basket[product.id] || 0;
   const increment = () => {
+    tg.HapticFeedback.impactOccurred('light');
     count += 1;
     basket[product.id] = count;
   }
   const decrement = () => {
+    tg.HapticFeedback.impactOccurred('light');
     count -= 1;
     if (basket[product.id] && count <= 0){
       delete basket[product.id];
