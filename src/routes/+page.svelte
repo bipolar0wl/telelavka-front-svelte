@@ -9,6 +9,9 @@
 	import ProductList from './../components/ProductList.svelte';
 	import FooterBar from './../components/FooterBar.svelte';
 	import Basket from './../components/Basket.svelte';
+	import {fetchCategories} from './../http/productsAPI.js'
+
+	//fetchCategories().then(data => console.log(data));
 
 	let categories = [];
 	let products = [];
@@ -26,6 +29,7 @@
 	onMount(async () => {
 		let tg = window.Telegram.WebApp;
 		currentCategory = categories[0];
+		alert(tg.initData)
 		tg.expand();
 		tg.MainButton.setText('Посмотреть заказ');
 		tg.MainButton.setParams({
