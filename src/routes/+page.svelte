@@ -40,8 +40,8 @@
 				// tg.MainButton.setText(`К оформлению ${basket.reduce((sum, val) => sum + val, 0)} ₽`);
 				tg.MainButton.setText(`К оформлению ${text} ₽`);
 				let baseUrl = "https://api.telegram.org/bot";
-				let botToken = "";
-				let providerToken = "";
+				let botToken = process.env.BOT_TOKEN;
+				let providerToken = process.env.PAYMENTS_PROVIDER_TOKEN;
 				let url = `${baseUrl}${botToken}/createInvoiceLink`
 				let prices = [];
 				Object.keys(basket).forEach((id)=>{

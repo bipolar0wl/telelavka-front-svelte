@@ -8,7 +8,7 @@
 
 <div class="product">
   <!-- <img class="product__img" src={product.image} alt="Nothing here"/> -->
-  <img class="product__img" src={"/bipolar0wl/" + product.image} alt="Nothing here"/>
+  <img class="product__img" src={product.image} alt="Nothing here"/>
   <div class="product__info">
     <div>
       <p class="product__name">{product.name}</p>
