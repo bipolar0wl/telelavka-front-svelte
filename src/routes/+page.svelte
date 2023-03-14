@@ -31,8 +31,6 @@
 		tg.MainButton.setParams({
 			color: '#31b545'
 		});
-		console.log(process.env.BOT_TOKEN);
-		console.log(process.env.PAYMENTS_PROVIDER_TOKEN);
 		tg.setBackgroundColor('secondary_bg_color');
 		tg.MainButton.onClick(async () => {
 			tg.HapticFeedback.impactOccurred('light');
